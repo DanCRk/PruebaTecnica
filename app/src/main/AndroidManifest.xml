@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.prueba.pruebatecnica">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,7 +12,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PruebaTecnica">
         <activity
-            android:name=".LoginActivity"
+            android:name=".auth.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".carreras.QuimicaActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".carreras.ComputacionActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".carreras.NoneActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".auth.RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
